@@ -4,3 +4,16 @@ header{
     padding: 10px 0;
     text-align: center;
 }
+a.button-design {
+    background-color: #fab9f2;
+    border: 3px solid rgb(252, 161, 130);
+    color: rgb(255, 140, 69);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
