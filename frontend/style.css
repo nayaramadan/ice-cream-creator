@@ -3,6 +3,7 @@ header{
     color: white;
     padding: 10px 0;
     text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 a.button-design {
     background-color: #fab9f2;
@@ -16,4 +17,47 @@ a.button-design {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
+    align-items: center;
+    align-content: center;
+    font-family: 'Arial', sans-serif;
+}
+.iframe-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.iframe-wrapper iframe {
+    width: 100%;
+    border: none;
+    display: block;
+}
+.inside-wrapper {
+    width: 100%;
+    height: 420px; /* inner iframe (400px) + 20px padding space */
+    background-color: #decdcd;
+}
+h1 {
+    color: #ff69b4;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ce8989;
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+}
+a.active {
+    background-color: #ff69b4;
+    color: white;
+    text-decoration: underline;
+}
+#site-title {
+    font-size: 19px;
+    font-weight: bold;
+    color: #f89d35;
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
 }
