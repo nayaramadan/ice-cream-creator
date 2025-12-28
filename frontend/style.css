@@ -27,13 +27,20 @@ a.button-design {
     overflow: hidden;
 }
 .iframe-wrapper iframe {
-    width: 100%;
+    width: 200px;
+    height: 100px;
+    display: block;
+    border: none;
+}
+.outside-wrapper iframe {
+    width: 300%;
+    height: 600px;
     border: none;
     display: block;
 }
-.inside-wrapper {
+.inside-wrapper iframe {
     width: 100%;
-    height: 420px; /* inner iframe (400px) + 20px padding space */
+    height: 420px;
     background-color: #decdcd;
 }
 h1 {
