@@ -30,19 +30,20 @@ a.button-design {
     width: 100px;
     height: 100px;
     display: block;
-    border: none;
+    border: solid 3px;
+    border-color:#ebaf6b
 }
 .outside-wrapper iframe {
     width: 300%;
     height: 500px;
-    border: none;
+    border: solid 5px;
+    border-color: #fab9f2;
     display: block;
-    background-color: #ff69b4;
 }
 .inside-wrapper iframe {
     width: 100%;
     height: 320px;
-    background-color: #decdcd;
+    background-color: #decdcd
 }
 h1 {
     color: #ff69b4;

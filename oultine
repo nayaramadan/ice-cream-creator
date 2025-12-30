@@ -1,0 +1,66 @@
+Main Page 
+    Index.html
+
+Iframes
+    Categories.html 
+        Base.html (click to lead to this)
+            Cup
+            Cone
+        ^ two options in new webpage + navigation page on bottom)
+
+
+        Flavors.html
+            Vanilla
+            Chocolate
+            Strawberry
+        Mixins.html
+            MnMs
+            Cookie and Cream 
+            Cookie Dough
+        Sauces.html
+            Maple Syrup
+            Chocolate
+            Raspberry
+        Toppings.html
+            Cherry
+            Brownie
+
+    Screen.html
+
+    <div class="pick-a-base">
+<button type="button" onclick="document.getElementById('content_frame').getElementById('base').innerHTML = displayCup()">
+<img src="images/icecreamcup.png" class="ice-cream-cup" alt="Ice Cream Cup" style="cursor:pointer;" height="300px" width="300px">
+<p> Ice Cream Cup </p>
+</button>
+^^ inside of base.html 
+
+<div id="base">
+<script>
+function displayCup() {
+ return '<img src="images/icecreamcup.png" alt="Selected Cup" style="width:300px; height:300px;">';
+}
+</script>
+</div>
+^^ inside of screen.html
+
+<button type="button" 
+  onclick="parent.frames['screen'].document.getElementById('base').innerHTML = '<img src=\'images/cup.png\'>'">
+
+
+
+
+  <!-- <script>
+function displayCup() {
+ return '<img src="images/icecreamcup.png" alt="Selected Cup" style="width:300px; height:300px;">';
+}
+</script>
+
+<!--or 
+<input type="image" src="your-image.jpg" alt="Description of button" onclick="yourFunction()">
+
+<script>
+function yourFunction() {
+  alert("Button clicked!");
+}
+</script>
+    </body>   
