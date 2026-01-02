@@ -8,8 +8,7 @@
   <p>Ice Cream Cup</p>
 </button>
 
-      
-
+  <button id="base-cone" onclick="selectBase2('cone')">
   <img src="images/icecreamcone.png" alt="Ice Cream Cone" style="cursor:pointer;" height="300" width="300">
   <p>Ice Cream Cone</p>
   </button>
@@ -24,5 +23,29 @@
 </div>
 </body>
 
-<!-- maybe this code will work?: <button type="image" src="images/icecreamcup.png" alt="Ice Cream Cup" onclick="document.getElementById('icecreambase').innerHTML = Cup()"></button>-->
-<!-- it didnt :sad: -->
+<script>
+  function selectBase() {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/icecreamcup.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+  </script>
+<script>
+  function selectBase2() {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/icecreamcone.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+</script>
