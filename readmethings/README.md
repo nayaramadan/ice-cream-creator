@@ -2,7 +2,7 @@
 Hello! This is an Ice Cream Creator.
 With 5 unique categories and about 3 choices per category, feel free to explore potential ice cream combinations and their aesthetic!
 Basically like a picsart thing but for ice cream
-<img src="images/strawberryicecreamcup.png">
+<img src="readmethings/strawberryicecreamcup.png">
 
 Took a while but I have an outline that will be pasted here:
 
