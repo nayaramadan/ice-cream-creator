@@ -27,6 +27,8 @@ Iframes
 
     Screen.html
 
+    some code drafts below for reference: (when I was trying to figure out javascript for the project w/iframe struggles)
+
     <div class="pick-a-base">
 <button type="button" onclick="document.getElementById('content_frame').getElementById('base').innerHTML = displayCup()">
 <img src="images/icecreamcup.png" class="ice-cream-cup" alt="Ice Cream Cup" style="cursor:pointer;" height="300px" width="300px">
