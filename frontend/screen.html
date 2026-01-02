@@ -6,6 +6,27 @@
     <body>
 <img id="icecreambase"></img>
 <div id="base"></div>
+<style>
+  #stage { position: relative; width: 400px; height: 400px; }
+  #stage img { position: absolute; left:0; top:0; width:100%; height:auto; pointer-events:none; display:none;}
+</style>
 
+<div id="stage">
+  <img id="layer-base" />
+  <img id="layer-flavor" />
+  <img id="layer-mixins" />
+  <img id="layer-sauce" />
+  <img id="layer-topping" />
+</div>
+
+<script>
+  window.setLayer = function(category, src) {
+    const img = document.getElementById('layer-' + category);
+    if (!img) return;
+    if (!src) { img.src = ''; img.style.display = 'none'; return; }
+    img.src = src;
+    img.style.display = 'block';
+  };
+</script>
 </body>
 </html>

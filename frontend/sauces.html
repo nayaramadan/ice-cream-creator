@@ -3,14 +3,22 @@
 </head>
 <body>
             <div class="pick-a-sauce">
+<button id="sauce" onclick="selectSauce('maple')">
 <img src="images/maplesyrupsauce.png" alt="Maple Syrup Sauce" style="cursor:pointer;" height="300px" width="300px">
 <p> Maple Syrup Sauce</p>
+            </button>
+<button id="sauce" onclick="selectSauce('chocolate')">
 <img src="images/chocolatesauce.png" alt="Chocolate Sauce" style="cursor:pointer;" height="300px" width="300px">
 <p> Chocolate Sauce</p>
+        </button>
+<button id="sauce" onclick="selectSauce('raspberry')">
 <img src="images/raspberrysauce.png" alt="Raspberry Sauce" style="cursor:pointer;" height="300px" width="300px">
 <p> Raspberry Sauce</p>
+        </button>
+<button id="sauce" onclick="selectSauce('suggest')">
 <img src="images/???.png" alt="SUGGEST A UNIQUE SAUCE!!" style="cursor:pointer;" height="300px" width="300px">
 <p> Suggest!</p>
+</button>
 </div>
 
 <div class="navigation">
@@ -20,4 +28,31 @@
 <a href="sauces.html" class="button-design active">Sauces</a>
 <a href="toppings.html" class="button-design">Toppings</a>
 </div>
+
+<script>
+(function() {
+  function getFrameWin() {
+    const frame = window.parent.document.getElementById('screen_frame');
+    return frame && frame.contentWindow;
+  }
+
+  const images = {
+    maple: 'images/maplesyrupsauce.png',
+    chocolate: 'images/chocolatesauce.png',
+    raspberry: 'images/raspberrysauce.png',
+  };
+
+  window.selectSauce = function(choice) {
+    const win = getFrameWin(); if (!win) return;
+    const src = images[choice];
+    if (src) win.setLayer('sauce', src);
+  };
+
+  window.clearSauce = function() {
+    const win = getFrameWin(); if (!win) return;
+    win.setLayer('sauce', '');
+  };
+})();
+</script>
+</body>
 </body>

@@ -3,15 +3,26 @@
 </head>
 <body>
     <div class="pick-a-topping">
+<button id="topping" onclick="selectTopping('cherry')">
 <img src="images/cherrytopping.png" alt="Cherry Topping" style="cursor:pointer;" height="300px" width="300px">
 <p> Cherry Topping </p>
+</button>
+
+<button id="topping" onclick="selectTopping('brownie')">
 <img src="images/brownietopping.png" alt="Brownie Topping" style="cursor:pointer;" height="300px" width="300px">
 <p> Brownie Topping </p>
+</button>
+
+<button id="topping" onclick="selectTopping('wafer')">
 <img src="images/wafertopping.png" alt="Wafer Topping" style="cursor:pointer;" height="300px" width="300px">
 <p> Wafer Topping </p>
+</button>
+
+<button id="topping" onclick="selectTopping('suggest')">
 <img src="images/???.png" alt="SUGGEST A TOPPING" style="cursor:pointer;" height="300px" width="300px">
 <p> Suggest!</p>
-    </div>
+</button>
+</div>
 
 <div class="navigation">
 <a href="base.html" class="button-design">Base</a>
@@ -20,4 +31,29 @@
 <a href="sauces.html" class="button-design">Sauces</a>
 <a href="toppings.html" class="button-design active">Toppings</a>
 </div>
+<script>
+(function() {
+  function getFrameWin() {
+    const frame = window.parent.document.getElementById('screen_frame');
+    return frame && frame.contentWindow;
+  }
+
+  const images = {
+    cherry: 'images/cherrytopping.png',
+    brownie: 'images/brownietopping.png',
+    wafer: 'images/wafertopping.png',
+  };
+
+  window.selectTopping = function(choice) {
+    const win = getFrameWin(); if (!win) return;
+    const src = images[choice];
+    if (src) win.setLayer('topping', src);
+  };
+
+  window.clearTopping = function() {
+    const win = getFrameWin(); if (!win) return;
+    win.setLayer('topping', '');
+  };
+})();
+</script>
 </body>

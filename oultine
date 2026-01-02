@@ -64,3 +64,120 @@ function yourFunction() {
 }
 </script>
     </body>   
+
+
+
+
+
+    <script>
+  function selectBase() {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+      if selectBase === 'cup'
+        iframe.src = 'images/icecreamcup.png';
+        iframe.onload = function() {
+      if selectBase === 'cone'
+        iframe.src = 'images/icecreamcone.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+        }
+    };
+  }
+}
+  </script>
+#2
+
+
+
+
+<script>
+  function selectBase() {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+      if selectBase === 'cup'
+        iframe.src = 'images/icecreamcup.png';
+        iframe.onload = function() {
+      if selectBase === 'cone'
+        iframe.src = 'images/icecreamcone.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+        }
+    };
+  }
+}
+  </script>
+
+-->
+  <script>
+  function selectBase() {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/icecreamcup.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+  </script>
+<script>
+  function selectBase2() {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/icecreamcone.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+  </script>
+
+^^^^^^ FOR BASE ^^^^^^
+<script>
+  function selectFlavor1(vanilla) {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/vanillabeanflavor.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+  </script>
+<script>
+  function selectFlavor2(chocolate) {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/chocolateflavor.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+</script>
+<script>
+  function selectFlavor3(strawberry) {
+    const iframe = window.parent.document.getElementById("screen_frame");
+    if (iframe) {
+        iframe.src = 'images/strawberryflavor.png';
+        iframe.onload = function() {
+        iframe.contentDocument.body.style.margin = "0";
+        iframe.contentDocument.body.querySelector('img').style.width = "20%";
+        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
+    };
+  }
+}
+</script>
+</body>
+^^^^^ FOR FLAVORS ^^^^^

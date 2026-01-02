@@ -3,22 +3,22 @@
 </head>
 <body>
 <div class="pick-a-flavor">
-  <button id="base-cup" onclick="selectFlavor1('vanilla')">
+  <button id="flavor" onclick="selectFlavor('vanilla')">
   <img src="images/vanillabeanflavor.png" alt="Vanilla" style="cursor:pointer;" height="300" width="300">
   <p>Vanilla Ice Cream</p>
   </button>
 
-  <button id="base-cone" onclick="selectFlavor2('chocolate')">
+  <button id="flavor" onclick="selectFlavor('chocolate')">
   <img src="images/chocolateflavor.png" alt="Chocolate" style="cursor:pointer;" height="300" width="300">
   <p>Chocolate Ice Cream</p>
   </button>
 
-  <button id="base-cone" onclick="selectFlavor3('strawberry')">
+  <button id="flavor" onclick="selectFlavor('strawberry')">
   <img src="images/strawberryflavor.png" alt="Strawberry" style="cursor:pointer;" height="300" width="300">
   <p>Strawberry Ice Cream</p>
   </button>
 
-  <button id="base-cone" onclick="selectFlavor4('coffee')">
+  <button id="flavor" onclick="selectFlavor('coffee')">
   <img src="images/coffeeflavor.png" alt="Coffee (coming soon!)" style="cursor:pointer;" height="300" width="300">
   <p>Coffee Ice Cream</p>
   </button>
@@ -33,42 +33,29 @@
 </div>
 
 <script>
-  function selectFlavor1(vanilla) {
-    const iframe = window.parent.document.getElementById("screen_frame");
-    if (iframe) {
-        iframe.src = 'images/vanillabeanflavor.png';
-        iframe.onload = function() {
-        iframe.contentDocument.body.style.margin = "0";
-        iframe.contentDocument.body.querySelector('img').style.width = "20%";
-        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
-    };
+(function() {
+  function getFrameWin() {
+    const frame = window.parent.document.getElementById('screen_frame');
+    return frame && frame.contentWindow;
   }
-}
-  </script>
-<script>
-  function selectFlavor2(chocolate) {
-    const iframe = window.parent.document.getElementById("screen_frame");
-    if (iframe) {
-        iframe.src = 'images/chocolateflavor.png';
-        iframe.onload = function() {
-        iframe.contentDocument.body.style.margin = "0";
-        iframe.contentDocument.body.querySelector('img').style.width = "20%";
-        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
-    };
-  }
-}
-</script>
-<script>
-  function selectFlavor3(strawberry) {
-    const iframe = window.parent.document.getElementById("screen_frame");
-    if (iframe) {
-        iframe.src = 'images/strawberryflavor.png';
-        iframe.onload = function() {
-        iframe.contentDocument.body.style.margin = "0";
-        iframe.contentDocument.body.querySelector('img').style.width = "20%";
-        iframe.contentDocument.body.querySelector('img').style.transform = "translate(50%, 10%)";
-    };
-  }
-}
+
+  const images = {
+    vanilla: 'images/vanillabeanflavor.png',
+    chocolate: 'images/chocolateflavor.png',
+    strawberry: 'images/strawberryflavor.png',
+    coffee: 'images/coffeeflavor.png'
+  };
+
+  window.selectFlavor = function(choice) {
+    const win = getFrameWin(); if (!win) return;
+    const src = images[choice];
+    if (src) win.setLayer('flavor', src);
+  };
+
+  window.clearFlavor = function() {
+    const win = getFrameWin(); if (!win) return;
+    win.setLayer('flavor', '');
+  };
+})();
 </script>
 </body>
